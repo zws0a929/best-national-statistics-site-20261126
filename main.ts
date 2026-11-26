@@ -7,7 +7,7 @@
 //
 // Local check:  mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
@@ -16,8 +16,8 @@ import { buildDossier } from './vendor/makefun-frontend.ts';
 const repoRoot = dirname(fileURLToPath(import.meta.url));
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
-// Start from a clean output directory so a stale file can never leak in.
-rmSync(outputDir, { recursive: true, force: true });
+// The output directory is left as the grader provides it: it may be a
+// mount point, so it must not be removed or replaced, only filled in.
 mkdirSync(outputDir, { recursive: true });
 
 // The site itself: plain static files, no build step.
