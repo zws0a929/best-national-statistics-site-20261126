@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malaysia in Numbers</title>
+<meta name="description" content="Malaysia in numbers: population, economy, labour, prices, trade, health and education — verified figures with sources, in one offline site.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#/">Stat<em>Malaysia</em></a>
+    <span class="tagline">Malaysia in numbers — verified, sourced, offline</span>
+    <div class="search-box">
+      <input id="site-search" type="search" placeholder="Search statistics…" aria-label="Search statistics">
+      <button id="search-btn" type="button">Search</button>
+    </div>
+  </div>
+  <nav class="main-nav" aria-label="Sections">
+    <a href="#/" data-route="">Overview</a>
+    <a href="#/population" data-route="population">Population</a>
+    <a href="#/economy" data-route="economy">Economy</a>
+    <a href="#/labour" data-route="labour">Labour</a>
+    <a href="#/prices" data-route="prices">Prices</a>
+    <a href="#/trade" data-route="trade">Trade</a>
+    <a href="#/health" data-route="health">Health</a>
+    <a href="#/education" data-route="education">Education</a>
+  </nav>
+</header>
+
+<main class="wrap" id="app"></main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <h4>About these numbers</h4>
+    <p>Every figure on this site names its source and year. Headline figures come
+    from the Department of Statistics Malaysia (DOSM) and the World Bank's World
+    Development Indicators. Figures are shown as published; where two reputable
+    sources differ (for example life expectancy), both are shown. This is an
+    independent reference site, not affiliated with DOSM or the World Bank, and
+    it works fully offline — no network requests, no tracking.</p>
+    <p>StatMalaysia — built for make.fun's “Make the best national statistics site” bounty.
+    Data checked November 2026.</p>
+  </div>
+</footer>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
